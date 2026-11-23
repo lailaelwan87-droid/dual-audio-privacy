@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark light" />
+  <meta name="description" content="سياسة الخصوصية لتطبيق Dual Audio (com.dualaudio.app) — Privacy Policy for Dual Audio." />
+  <title>Dual Audio — سياسة الخصوصية | Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #0b0f17;
+      --surface: #121824;
+      --surface-elevated: #192232;
+      --border: #263247;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --emerald: #10e5a5;
+      --emerald-soft: rgba(16, 229, 165, 0.14);
+      --cyan: #38bdf8;
+      --cyan-soft: rgba(56, 189, 248, 0.14);
+      --amber: #f59e0b;
+      --amber-soft: rgba(245, 158, 11, 0.14);
+      --radius: 16px;
+      --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans Arabic", "Helvetica Neue", Arial, sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f3f6fa;
+        --surface: #ffffff;
+        --surface-elevated: #e9eff6;
+        --border: #cbd5e1;
+        --text: #0f172a;
+        --muted: #475569;
+        --emerald: #007e5e;
+        --emerald-soft: rgba(0, 126, 94, 0.12);
+        --cyan: #0284c7;
+        --cyan-soft: rgba(2, 132, 199, 0.12);
+        --amber: #b45309;
+        --amber-soft: rgba(180, 83, 9, 0.12);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(11, 15, 23, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    @media (prefers-color-scheme: light) {
+      .topbar {
+        background: rgba(243, 246, 250, 0.9);
+      }
+    }
+
+    .topbar-inner {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: -0.01em;
+    }
+
+    .brand-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 11px;
+      background: linear-gradient(135deg, var(--emerald-soft), var(--cyan-soft));
+      border: 1px solid var(--border);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+
+    .lang-btn {
+      appearance: none;
+      border: 1px solid var(--border);
+      background: var(--surface-elevated);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 9px 16px;
+      border-radius: 999px;
+      cursor: pointer;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: border-color 0.2s ease, transform 0.15s ease;
+    }
+
+    .lang-btn:hover {
+      border-color: var(--emerald);
+    }
+
+    .lang-btn:active {
+      transform: scale(0.98);
+    }
+
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 28px 20px 64px;
+    }
+
+    .hero {
+      background: linear-gradient(160deg, var(--emerald-soft), var(--surface) 42%, var(--cyan-soft));
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 28px 24px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.5rem, 3.2vw, 2.15rem);
+      line-height: 1.3;
+    }
+
+    .hero p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      border: 1px solid var(--border);
+      background: var(--surface);
+    }
+
+    .badge.emerald {
+      color: var(--emerald);
+      background: var(--emerald-soft);
+      border-color: transparent;
+    }
+
+    .badge.cyan {
+      color: var(--cyan);
+      background: var(--cyan-soft);
+      border-color: transparent;
+    }
+
+    .badge.mono {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      direction: ltr;
+      unicode-bidi: isolate;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .summary-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+
+    .summary-card .label {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .summary-card .value {
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: var(--emerald);
+    }
+
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      margin-bottom: 24px;
+    }
+
+    .toc-title {
+      font-weight: 700;
+      margin: 0 0 10px;
+      font-size: 0.95rem;
+      color: var(--cyan);
+    }
+
+    .toc-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .toc-list a {
+      text-decoration: none;
+      color: var(--text);
+      background: var(--surface-elevated);
+      border: 1px solid var(--border);
+      padding: 5px 11px;
+      border-radius: 10px;
+      font-size: 0.84rem;
+      display: inline-block;
+    }
+
+    .toc-list a:hover {
+      border-color: var(--cyan);
+      color: var(--cyan);
+    }
+
+    .section-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      margin-bottom: 16px;
+    }
+
+    .section-card h2 {
+      margin: 0 0 10px;
+      font-size: 1.15rem;
+      color: var(--emerald);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-card p {
+      margin: 0 0 10px;
+      color: var(--text);
+    }
+
+    .section-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-card ul {
+      margin: 8px 0 10px;
+      padding-inline-start: 22px;
+    }
+
+    .section-card li {
+      margin-bottom: 6px;
+    }
+
+    code {
+      font-family: var(--font-mono);
+      font-size: 0.84em;
+      background: var(--surface-elevated);
+      padding: 2px 6px;
+      border-radius: 6px;
+      direction: ltr;
+      unicode-bidi: isolate;
+      display: inline-block;
+    }
+
+    .callout {
+      margin-top: 10px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      background: var(--amber-soft);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      font-size: 0.92rem;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 8px 14px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--surface-elevated);
+      color: var(--cyan);
+      font-family: var(--font-mono);
+      font-size: 0.92rem;
+      font-weight: 600;
+      text-decoration: none;
+      direction: ltr;
+      unicode-bidi: isolate;
+      transition: border-color 0.2s ease, background-color 0.2s ease;
+    }
+
+    .contact-link:hover {
+      border-color: var(--emerald);
+      color: var(--emerald);
+    }
+
+    footer {
+      margin-top: 32px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.86rem;
+      text-align: center;
+    }
+
+    .lang-view {
+      display: none;
+    }
+
+    html[lang="ar"] .lang-view.ar {
+      display: block;
+    }
+
+    html[lang="en"] .lang-view.en {
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding: 20px 16px;
+      }
+      .section-card {
+        padding: 18px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="brand-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" style="color: var(--emerald)">
+            <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
+            <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z" />
+            <path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
+          </svg>
+        </span>
+        <span id="brandTitle">الصوت المزدوج — Dual Audio</span>
+      </div>
+      <button type="button" class="lang-btn" id="langToggle" aria-label="Switch language">
+        <span id="langToggleLabel">English</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- ARABIC VERSION (RTL) -->
+    <article class="lang-view ar">
+      <section class="hero">
+        <h1>سياسة الخصوصية — تطبيق الصوت المزدوج (Dual Audio)</h1>
+        <p>تطبيق Android مجاني ومفتوح المصدر يعمل محلياً بالكامل على جهازك لتشغيل الصوت على سماعتين معاً بدون إنترنت أو تتبع.</p>
+        <div class="badges">
+          <span class="badge emerald">بدون جمع بيانات</span>
+          <span class="badge cyan">بدون إذن الإنترنت</span>
+          <span class="badge">مجاني — GPL-3.0-or-later</span>
+          <span class="badge mono">com.dualaudio.app</span>
+        </div>
+      </section>
+
+      <section class="summary-grid" aria-label="ملخص الخصوصية">
+        <div class="summary-card">
+          <div class="label">البيانات المجمّعة</div>
+          <div class="value">صفر (لا شيء)</div>
+        </div>
+        <div class="summary-card">
+          <div class="label">الإرسال لخوادم خارجية</div>
+          <div class="value">صفر (لا يوجد إذن إنترنت)</div>
+        </div>
+        <div class="summary-card">
+          <div class="label">الإعلانات والتتبع</div>
+          <div class="value">لا يوجد أي SDKs</div>
+        </div>
+        <div class="summary-card">
+          <div class="label">آخر تحديث</div>
+          <div class="value">22 نوفمبر 2026</div>
+        </div>
+      </section>
+
+      <nav class="toc" aria-label="فهرس الأقسام">
+        <div class="toc-title">أقسام سياسة الخصوصية</div>
+        <ul class="toc-list">
+          <li><a href="#ar-intro">1. مقدمة</a></li>
+          <li><a href="#ar-collection">2. جمع المعلومات</a></li>
+          <li><a href="#ar-usage">3. استخدام البيانات</a></li>
+          <li><a href="#ar-permissions">4. الأذونات</a></li>
+          <li><a href="#ar-shizuku">5. استخدام Shizuku</a></li>
+          <li><a href="#ar-storage">6. التخزين المحلي</a></li>
+          <li><a href="#ar-sharing">7. مشاركة البيانات</a></li>
+          <li><a href="#ar-thirdparty">8. الخدمات الخارجية</a></li>
+          <li><a href="#ar-security">9. أمان البيانات</a></li>
+          <li><a href="#ar-retention">10. الاحتفاظ والحذف</a></li>
+          <li><a href="#ar-children">11. خصوصية الأطفال</a></li>
+          <li><a href="#ar-updates">12. تحديثات السياسة</a></li>
+          <li><a href="#ar-contact">13. التواصل</a></li>
+        </ul>
+      </nav>
+
+      <section class="section-card" id="ar-intro">
+        <h2>1. مقدمة (Introduction)</h2>
+        <p>توضح سياسة الخصوصية هذه كيفية تعامل تطبيق <strong>Dual Audio (الصوت المزدوج)</strong> (<code>com.dualaudio.app</code>) مع المعلومات على جهازك. التطبيق مجاني ومفتوح المصدر مرخّص بموجب <strong>GNU General Public License v3.0 or later (GPL-3.0-or-later)</strong>، ويُوزّع للاستخدام الحر خارج Google Play، ويعمل محلياً بالكامل على جهازك.</p>
+        <p>تصف سياسة الخصوصية هذه سلوك <strong>الإصدار الحالي من التطبيق</strong> (الإصدار <code>2.0.1</code>) فقط كما هو مُنفَّذ فعلياً في الشيفرة المصدرية الحالية.</p>
+      </section>
+
+      <section class="section-card" id="ar-collection">
+        <h2>2. جمع المعلومات (Information Collection)</h2>
+        <p><strong>لا يجمع التطبيق أي بيانات شخصية أو معلومات تعريفية عنك.</strong> وللشفافية الدقيقة نميّز بين ثلاثة مفاهيم:</p>
+        <ul>
+          <li><strong>البيانات المجمّعة (Collected):</strong> لا شيء. لا نجمع الأسماء أو البريد الإلكتروني أو المعرّفات الإعلانية أو التسجيلات الصوتية أو الموقع الجغرافي.</li>
+          <li><strong>البيانات التي يصل إليها التطبيق محلياً في الذاكرة (Accessed Locally):</strong> قائمة أجهزة إخراج الصوت المتصلة حالياً عبر <code>AudioManager</code> (الاسم، النوع، المعرّف الداخلي، وعنوان الجهاز الذي يتيحه النظام)، إضافةً إلى خصائص تدفق الصوت وحالة التوجيه وزمن التأخير (<code>AudioFlinger</code>) عند الاتصال بـ Shizuku — وتُستخدم في الذاكرة المؤقتة فقط.</li>
+          <li><strong>البيانات المرسلة خارج الجهاز (Transmitted):</strong> لا شيء. لا يملك التطبيق إذن الإنترنت ولا يرسل أي طلب شبكي.</li>
+        </ul>
+      </section>
+
+      <section class="section-card" id="ar-usage">
+        <h2>3. استخدام البيانات (Data Usage)</h2>
+        <p>تُستخدم المعلومات المحلية داخل ذاكرة الجهاز حصرياً لتشغيل وظائف التطبيق:</p>
+        <ul>
+          <li>عرض السماعات السلكية (3.5mm) وUSB وسماعات البلوتوث المتصلة حالياً.</li>
+          <li>تفعيل وإيقاف توجيه صوت الوسائط إلى مخرجين صوتيين معاً.</li>
+          <li>التحكم المستقل بمستوى صوت كل سماعة على حدة.</li>
+          <li>قياس فرق التأخير (Latency) وتعديله يدوياً أو عبر خيار الضبط التلقائي المتاح في التطبيق.</li>
+        </ul>
+      </section>
+
+      <section class="section-card" id="ar-permissions">
+        <h2>4. الأذونات (Permissions)</h2>
+        <p>لا يطلب التطبيق أي أذونات خطيرة أو أذونات وقت التشغيل (لا ميكروفون، لا موقع، لا كاميرا، لا تخزين، لا جهات اتصال، ولا إذن <code>INTERNET</code>).</p>
+        <ul>
+          <li><code>&lt;queries&gt;</code> لحزمة <code>moe.shizuku.privileged.api</code>: للتحقق من تثبيت Shizuku وفتحه.</li>
+          <li><code>moe.shizuku.manager.permission.API_V23</code>: إذن مدمج من مكتبة Shizuku API لطلب التفويض المحلي من Shizuku.</li>
+          <li><code>com.dualaudio.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>: إذن داخلي بمستوى <code>signature</code> مدمج من AndroidX Core لحماية المستقبلات الداخلية.</li>
+          <li>تقييد <code>ShizukuProvider</code> بإذن النظام <code>android.permission.INTERACT_ACROSS_USERS_FULL</code> لمنع أي تطبيق غير مخوّل من الوصول لقناة Shizuku.</li>
+        </ul>
+      </section>
+
+      <section class="section-card" id="ar-shizuku">
+        <h2>5. استخدام Shizuku (Shizuku Usage)</h2>
+        <p>يستعين التطبيق بخدمة <strong>Shizuku</strong> (تطبيق مستقل يثبّته المستخدم ويشغّله بنفسه محلياً) لتنفيذ توجيه الصوت المزدوج عبر خدمة محلية (<code>DualOutputShizukuService</code>) دون الحاجة لصلاحيات Root.</p>
+        <p>يتم جميع التواصل مع Shizuku محلياً داخل الجهاز عبر IPC فقط، ولا تُرسل أي بيانات خارج جهازك، ويمكنك سحب الإذن في أي لحظة من داخل تطبيق Shizuku.</p>
+      </section>
+
+      <section class="section-card" id="ar-storage">
+        <h2>6. التخزين المحلي (Local Storage)</h2>
+        <p>يحفظ التطبيق تفضيلاتك غير الشخصية محلياً داخل مساحة التطبيق الخاصة باستخدام <strong>Jetpack DataStore Preferences</strong> (<code>dual_audio_prefs</code>):</p>
+        <ul>
+          <li>لغة الواجهة (العربية / الإنجليزية) والمظهر (داكن / فاتح).</li>
+          <li>وضع التوجيه المختار، أولوية المخرج الأساسي، وخيار إعادة التفعيل التلقائي.</li>
+          <li>قيمة تأخير السماعة السلكية بالملي ثانية وخيار الضبط التلقائي للتأخير.</li>
+          <li>مستوى الصوت المحفوظ للسماعة السلكية وسماعة البلوتوث.</li>
+        </ul>
+        <div class="callout">
+          ملاحظة تقنية: خاصية النسخ الاحتياطي القياسية لنظام Android (<code>android:allowBackup="true"</code>) مفعّلة في ملف التطبيق، وقد تشمل هذه التفضيلات غير الشخصية ضمن نسختك الاحتياطية الخاصة في Android إذا كنت مفعّلاً لها في إعدادات جهازك.
+        </div>
+      </section>
+
+      <section class="section-card" id="ar-sharing">
+        <h2>7. مشاركة البيانات (Data Sharing)</h2>
+        <p>لا يشارك التطبيق ولا يبيع ولا ينقل أي بيانات لأي طرف ثالث. عند ضغطك اختيارياً على زر «نسخ التفاصيل» داخل قسم التفاصيل التقنية المطوي، يُنسخ النص إلى حافظة جهازك المحلية فقط بطلب مباشر منك.</p>
+      </section>
+
+      <section class="section-card" id="ar-thirdparty">
+        <h2>8. الخدمات الخارجية (Third-party Services)</h2>
+        <p>لا يحتوي التطبيق على أي خدمات تحليل أو تتبع (Analytics) أو تقارير أعطال أو إعلانات (AdMob) أو اشتراكات أو Firebase مفعّلة.</p>
+        <p>يقتصر التفاعل مع الأطراف الخارجية على حالتين بإرادتك المباشرة: (1) الاتصال المحلي على الجهاز مع تطبيق <strong>Shizuku</strong> الذي تثبّته أنت، و(2) فتح رابط تنزيل Shizuku في متصفحك أو متجر التطبيقات إذا ضغطت على زر «تثبيت Shizuku».</p>
+      </section>
+
+      <section class="section-card" id="ar-security">
+        <h2>9. أمان البيانات (Data Security)</h2>
+        <p>لأن التطبيق يعمل دون اتصال بالإنترنت (بلا إذن <code>INTERNET</code>)، ولا يجمع بيانات شخصية، ويحفظ التفضيلات داخل بيئة Android المعزولة مع تقييد قناة Shizuku بإذن النظام <code>INTERACT_ACROSS_USERS_FULL</code>، فإن مخاطر كشف البيانات في حدها الأدنى.</p>
+      </section>
+
+      <section class="section-card" id="ar-retention">
+        <h2>10. الاحتفاظ بالبيانات وحذفها (Data Retention and Deletion)</h2>
+        <p>تبقى التفضيلات المحلية على جهازك طالما التطبيق مثبّت فقط. يمكنك حذفها نهائياً في أي وقت من <strong>إعدادات Android ← التطبيقات ← Dual Audio ← التخزين ← مسح البيانات</strong>، أو عبر إلغاء تثبيت التطبيق.</p>
+      </section>
+
+      <section class="section-card" id="ar-children">
+        <h2>11. خصوصية الأطفال (Children's Privacy)</h2>
+        <p>لا يجمع التطبيق أي بيانات شخصية من أي مستخدم على الإطلاق، وبالتالي لا يجمع عن علم أو دون علم أي معلومات شخصية من الأطفال دون سن 13 عاماً (أو السن القانوني المعمول به في بلدك).</p>
+      </section>
+
+      <section class="section-card" id="ar-updates">
+        <h2>12. تحديثات السياسة (Policy Updates)</h2>
+        <p>تصف هذه السياسة الإصدار الحالي من التطبيق. قد يتم تحديث سياسة الخصوصية هذه عند إدخال تغييرات تقنية أو ميزات جديدة في إصدارات مستقبلية، وستُنشر النسخة المحدّثة في مستودع المشروع وهذه الصفحة وداخل التطبيق مع تحديث تاريخ «آخر تحديث».</p>
+      </section>
+
+      <section class="section-card" id="ar-contact">
+        <h2>13. معلومات التواصل (Contact Information)</h2>
+        <p>للاستفسارات المتعلقة بسياسة الخصوصية أو حقوق الرخصة المفتوحة (GPL-3.0-or-later)، يمكنك التواصل عبر البريد الإلكتروني:</p>
+        <p><a class="contact-link" href="mailto:Lailaelwan87@gmail.com">Lailaelwan87@gmail.com</a></p>
+      </section>
+
+      <footer>
+        <p>Dual Audio (<code>com.dualaudio.app</code>) — مرخّص بموجب GNU GPL v3.0 أو أحدث (GPL-3.0-or-later). حقوق المشروع الأصلي محفوظة لـ xTudoS (2026) مع إشعارات التعديل.</p>
+      </footer>
+    </article>
+
+    <!-- ENGLISH VERSION (LTR) -->
+    <article class="lang-view en">
+      <section class="hero">
+        <h1>Privacy Policy — Dual Audio</h1>
+        <p>Free, open-source Android app operating 100% locally on your device to play media across two headphones simultaneously—offline and tracker-free.</p>
+        <div class="badges">
+          <span class="badge emerald">Zero Data Collection</span>
+          <span class="badge cyan">No INTERNET Permission</span>
+          <span class="badge">Free — GPL-3.0-or-later</span>
+          <span class="badge mono">com.dualaudio.app</span>
+        </div>
+      </section>
+
+      <section class="summary-grid" aria-label="Privacy Summary">
+        <div class="summary-card">
+          <div class="label">Data Collected</div>
+          <div class="value">None (Zero)</div>
+        </div>
+        <div class="summary-card">
+          <div class="label">External Transmission</div>
+          <div class="value">None (Offline Only)</div>
+        </div>
+        <div class="summary-card">
+          <div class="label">Ads &amp; Trackers</div>
+          <div class="value">Zero Third-Party SDKs</div>
+        </div>
+        <div class="summary-card">
+          <div class="label">Last Updated</div>
+          <div class="value">November 22, 2026</div>
+        </div>
+      </section>
+
+      <nav class="toc" aria-label="Table of Contents">
+        <div class="toc-title">Policy Sections</div>
+        <ul class="toc-list">
+          <li><a href="#en-intro">1. Introduction</a></li>
+          <li><a href="#en-collection">2. Information Collection</a></li>
+          <li><a href="#en-usage">3. Data Usage</a></li>
+          <li><a href="#en-permissions">4. Permissions</a></li>
+          <li><a href="#en-shizuku">5. Shizuku Usage</a></li>
+          <li><a href="#en-storage">6. Local Storage</a></li>
+          <li><a href="#en-sharing">7. Data Sharing</a></li>
+          <li><a href="#en-thirdparty">8. Third-party Services</a></li>
+          <li><a href="#en-security">9. Data Security</a></li>
+          <li><a href="#en-retention">10. Retention &amp; Deletion</a></li>
+          <li><a href="#en-children">11. Children's Privacy</a></li>
+          <li><a href="#en-updates">12. Policy Updates</a></li>
+          <li><a href="#en-contact">13. Contact</a></li>
+        </ul>
+      </nav>
+
+      <section class="section-card" id="en-intro">
+        <h2>1. Introduction</h2>
+        <p>This Privacy Policy explains how <strong>Dual Audio</strong> (<code>com.dualaudio.app</code>) handles information on your device. Dual Audio is a free, open-source Android application distributed outside Google Play under the <strong>GNU General Public License v3.0 or later (GPL-3.0-or-later)</strong>, designed to operate strictly locally on your device.</p>
+        <p>This Privacy Policy describes the behavior of the <strong>current version of the application</strong> (version <code>2.0.1</code>) as implemented in the current codebase.</p>
+      </section>
+
+      <section class="section-card" id="en-collection">
+        <h2>2. Information Collection</h2>
+        <p><strong>Dual Audio does not collect any personal data or personally identifiable information.</strong> For clear transparency, we distinguish between collection, local access, and transmission:</p>
+        <ul>
+          <li><strong>Data Collected:</strong> None. We do not collect names, email addresses, advertising IDs, phone numbers, audio recordings, or location data.</li>
+          <li><strong>Data Accessed Locally (In-Memory Only):</strong> Currently connected audio output devices via Android's <code>AudioManager</code> API (device name, device type, internal ID, and device address if exposed by Android), plus audio output properties, routing state, and <code>AudioFlinger</code> latency figures when Shizuku is connected—held only in volatile memory while running.</li>
+          <li><strong>Data Transmitted Externally:</strong> None. The app does not declare the <code>INTERNET</code> permission and makes zero network requests.</li>
+        </ul>
+      </section>
+
+      <section class="section-card" id="en-usage">
+        <h2>3. Data Usage</h2>
+        <p>Locally accessed device information is used strictly on-device to deliver core functionality:</p>
+        <ul>
+          <li>Displaying connected 3.5mm wired, USB, and Bluetooth audio outputs.</li>
+          <li>Enabling and disabling simultaneous dual media output routing.</li>
+          <li>Adjusting each headphone's volume independently.</li>
+          <li>Measuring and adjusting Bluetooth-to-wired audio latency manually or using the app's auto-sync option.</li>
+        </ul>
+      </section>
+
+      <section class="section-card" id="en-permissions">
+        <h2>4. Permissions</h2>
+        <p>Dual Audio requests <strong>no runtime/dangerous permissions</strong> (no <code>RECORD_AUDIO</code>, no location, no camera, no storage, no contacts, no <code>BLUETOOTH_CONNECT</code>) and declares <strong>no <code>INTERNET</code> or <code>ACCESS_NETWORK_STATE</code> permission</strong>.</p>
+        <ul>
+          <li><code>&lt;queries&gt;</code> for <code>moe.shizuku.privileged.api</code>: package visibility to detect and open Shizuku on Android 11+.</li>
+          <li><code>moe.shizuku.manager.permission.API_V23</code> (merged from Shizuku API): allows requesting local Shizuku binder authorization.</li>
+          <li><code>com.dualaudio.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code> (internal <code>signature</code>-level AndroidX Core permission): secures internal receivers.</li>
+          <li><code>rikka.shizuku.ShizukuProvider</code> protected by <code>android.permission.INTERACT_ACROSS_USERS_FULL</code>: restricts provider binding exclusively to Shizuku's privileged process.</li>
+        </ul>
+      </section>
+
+      <section class="section-card" id="en-shizuku">
+        <h2>5. Shizuku Usage</h2>
+        <p>Dual audio routing and independent per-device volume rely on <strong>Shizuku</strong>, an independent third-party app installed and started locally by the user without root.</p>
+        <p>All communication with Shizuku occurs strictly on-device via local IPC (<code>DualOutputShizukuService</code>). No data leaves your device via Shizuku, and you can revoke access at any time inside the Shizuku app.</p>
+      </section>
+
+      <section class="section-card" id="en-storage">
+        <h2>6. Local Storage</h2>
+        <p>Dual Audio stores non-personal app preferences exclusively inside Android's private app storage using <strong>Jetpack DataStore Preferences</strong> (<code>dual_audio_prefs</code>):</p>
+        <ul>
+          <li>UI language (Arabic or English) and theme (Dark or Light).</li>
+          <li>Selected routing mode, primary output priority, and auto-reapply toggle.</li>
+          <li>Wired delay offset (ms) and auto-sync latency toggle.</li>
+          <li>Last selected volume levels for wired/USB and Bluetooth channels.</li>
+        </ul>
+        <div class="callout">
+          Technical note: Standard Android Auto Backup (<code>android:allowBackup="true"</code>) is enabled in the manifest, so the Android OS may back up these non-personal preference settings to your own Android backup if you have enabled device backups in system settings.
+        </div>
+      </section>
+
+      <section class="section-card" id="en-sharing">
+        <h2>7. Data Sharing</h2>
+        <p>We do not share, sell, or transfer any data to third parties. If you explicitly tap "Copy Details" inside the collapsed technical diagnostics panel, the diagnostic summary is copied only to your device's local clipboard at your request.</p>
+      </section>
+
+      <section class="section-card" id="en-thirdparty">
+        <h2>8. Third-party Services</h2>
+        <p>Dual Audio includes <strong>no analytics, no crash reporting, no ads (no AdMob), no subscriptions/billing SDKs, and no active Firebase services</strong>.</p>
+        <p>The only external interactions are strictly user-initiated: (1) local on-device IPC with your user-installed <strong>Shizuku</strong> app, and (2) opening the Shizuku download link in your device's browser/store only if you tap "Install Shizuku" when Shizuku is absent.</p>
+      </section>
+
+      <section class="section-card" id="en-security">
+        <h2>9. Data Security</h2>
+        <p>Because Dual Audio has no <code>INTERNET</code> permission, collects no personal data, stores only non-sensitive preferences inside Android's private sandbox, and protects its Shizuku provider with <code>INTERACT_ACROSS_USERS_FULL</code>, data exposure risk is minimized by design.</p>
+      </section>
+
+      <section class="section-card" id="en-retention">
+        <h2>10. Data Retention and Deletion</h2>
+        <p>Local preferences remain on your device only while Dual Audio is installed. You can permanently delete them anytime via <strong>Android Settings → Apps → Dual Audio → Storage → Clear data</strong>, or by uninstalling the app.</p>
+      </section>
+
+      <section class="section-card" id="en-children">
+        <h2>11. Children's Privacy</h2>
+        <p>Because Dual Audio collects no personal data from any user, it does not knowingly collect personal information from children under 13 (or the applicable age of digital consent in your jurisdiction).</p>
+      </section>
+
+      <section class="section-card" id="en-updates">
+        <h2>12. Policy Updates</h2>
+        <p>This Privacy Policy describes the current version of the application. We may update it if future releases introduce technical changes or features that affect how information is handled, and updated versions will be published in the project repository, on this page, and inside future app releases with a revised "Last Updated" date.</p>
+      </section>
+
+      <section class="section-card" id="en-contact">
+        <h2>13. Contact Information</h2>
+        <p>For questions regarding this Privacy Policy or GPL-3.0-or-later licensing, you can contact us by email:</p>
+        <p><a class="contact-link" href="mailto:Lailaelwan87@gmail.com">Lailaelwan87@gmail.com</a></p>
+      </section>
+
+      <footer>
+        <p>Dual Audio (<code>com.dualaudio.app</code>) — Licensed under GNU GPL v3.0 or later (GPL-3.0-or-later). Original Dual Audio Copyright (C) 2026 xTudoS; modified derivative.</p>
+      </footer>
+    </article>
+  </main>
+
+  <script>
+    (function () {
+      var html = document.documentElement;
+      var btn = document.getElementById("langToggle");
+      var btnLabel = document.getElementById("langToggleLabel");
+      var brandTitle = document.getElementById("brandTitle");
+
+      function applyLang(lang) {
+        var isAr = lang === "ar";
+        html.lang = isAr ? "ar" : "en";
+        html.dir = isAr ? "rtl" : "ltr";
+        btnLabel.textContent = isAr ? "English" : "العربية";
+        brandTitle.textContent = isAr ? "الصوت المزدوج — Dual Audio" : "Dual Audio — Privacy Policy";
+        try {
+          window.localStorage.setItem("dualaudio_policy_lang", lang);
+        } catch (e) {}
+      }
+
+      var initial = "ar";
+      try {
+        var saved = window.localStorage.getItem("dualaudio_policy_lang");
+        if (saved === "en" || saved === "ar") {
+          initial = saved;
+        }
+      } catch (e) {}
+      applyLang(initial);
+
+      btn.addEventListener("click", function () {
+        applyLang(html.lang === "ar" ? "en" : "ar");
+      });
+    })();
+  </script>
+</body>
+</html>
